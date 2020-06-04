@@ -14,16 +14,13 @@ module.exports = {
       { name: "Home", to: "/" },
       { name: "About", to: "/about" },
     ],
-    links: {
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      pinterest: "https://pinterest.com/",
-      twitter: "https://twitter.com/",
+    links: { 
+      instagram: "https://www.instagram.com/harryorford",
     },
     locale: "en",
-    title: `John Doe`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    title: `Harry Orford`,
+    description: `Portfolio of Harry Orford`,
+    author: `@harryorford`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
