@@ -45,13 +45,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-mailchimp",
-      options: {
-        endpoint: process.env.MAILCHIMP_ENDPOINT,
-      },
-    },
-    {
+     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `John Doe`,
