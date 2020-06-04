@@ -1,13 +1,3 @@
-require("dotenv").config()
-
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
-
-if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
-  throw new Error(
-    "Contentful spaceId and the access token need to be provided."
-  )
-}
-
 module.exports = {
   siteMetadata: {
     menu: [
