@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: a5wvx3xkreib,
-        accessToken: CFPAT-A1lXoXNqyCcctYgfoPKYh7A9CmoOPdGj_fJmyeVYmwY,
+        spaceId: `a5wvx3xkreib`,
+        accessToken: process.env.CFPAT-A1lXoXNqyCcctYgfoPKYh7A9CmoOPdGj_fJmyeVYmwY,
         downloadLocal: true,
       },
     },
