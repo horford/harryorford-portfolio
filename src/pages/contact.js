@@ -2,14 +2,11 @@ import { graphql } from "gatsby"
 import React from "react"
 import Contact from "../components/ContactForm"
 import Layout from "../layouts/Layout"
-import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
-import ContactForm from "../components/ContactForm"
 
 const ContactPage = ({ data }) => (
   <Layout>
     <SiteMetadata title="Contact" description="Sample description" />
-
     <div className="bg-gray-100">
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
@@ -29,14 +26,3 @@ const ContactPage = ({ data }) => (
 
 export default ContactPage
 
-export const query = graphql`
-  query {
-    harry: file(relativePath: { eq: "harry.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 480, quality: 85) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
