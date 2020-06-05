@@ -17,34 +17,30 @@ const AboutPage = ({ data }) => (
               About me
             </h1>
 
-            <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-              Interdum et malesuada fames ac ante.
-            </h2>
             <div className="mt-4 leading-loose">
-              Curabitur non hendrerit dolor. Interdum et malesuada fames ac ante
-              ipsum primis in faucibus. Ut&nbsp;sapien ex, fringilla sed
-              consectetur et, pharetra eget lacus.
+            My name is Harry and I'm a graduate from Falmouth University where I studied a BA Animation & 
+            Visual Effects degree and I'm currently working towards being an FX artist. 
+            My software specialities are as follows; Houdini, Maya, Renderman, Arnold, Nuke.
               <br />
               <br />
-              Morbi sem leo, varius ut tempus et, tempor sit amet nibh.
-              Curabitur fermentum feugiat libero, sed egestas lorem aliquam et.
-              Praesent id mi purus. Morbi sem leo, varius ut tempus et, tempor
-              sit amet nibh.
+              I'm also currently learning C++ and Python basics. I have a strong background in live action compositing. 
+              I've also had the privilege of being able to use a wide range of different cameras at university which includes the Blackmagic cameras and Red Cinema cameras. 
+              This has allowed me to collect a wide range of stock footage for personal use in the future.
               <br />
               <br />
-              I'm happy to hear from you:
+              I'd be more than happy to hear from you:
               <br />
               <a
-                href="mailto:contact@johndoe.com"
+                href="mailto:harryorford1@gmail.com"
                 className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
               >
-                contact@johndoe.com
+                harryorford1@gmail.com
               </a>
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
             <Img
-              fluid={data.author.childImageSharp.fluid}
+              fluid={data.harry.childImageSharp.fluid}
               alt="John Doe"
               className="rounded-md shadow-md"
             />
@@ -60,7 +56,7 @@ export default AboutPage
 
 export const query = graphql`
   query {
-    author: file(relativePath: { eq: "author.jpg" }) {
+    harry: file(relativePath: { eq: "harry.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, maxHeight: 480, quality: 85) {
           ...GatsbyImageSharpFluid_withWebp

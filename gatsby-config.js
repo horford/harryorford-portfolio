@@ -16,14 +16,14 @@ module.exports = {
     ],
     links: {
       facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
+      instagram: "https://www.instagram.com/harryorford",
       pinterest: "https://pinterest.com/",
       twitter: "https://twitter.com/",
     },
     locale: "en",
-    title: `John Doe`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    title: `Harry Orford`,
+    description: `Portfolio of John Doe`,
+    author: `@harryorford`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
