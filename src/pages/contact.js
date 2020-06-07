@@ -1,4 +1,3 @@
-import { graphql } from "gatsby"
 import React from "react"
 import Contact from "../components/ContactForm"
 import Layout from "../layouts/Layout"

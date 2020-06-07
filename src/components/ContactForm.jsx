@@ -2,7 +2,7 @@ import React from "react"
 
 const ContactForm = () => (
   <div className="container">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact">
           
           <div class="flex flex-wrap -mx-3 mb-6">
             
@@ -44,7 +44,7 @@ const ContactForm = () => (
             <div class="w-full md:w-2/3 px-3">
               <div class="md:w-1/3"></div>             
                 <div class="md:w-2/3">
-                  <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                  <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
                     Sign Up
                   </button>
                   <input type="hidden" name="bot-field" />
