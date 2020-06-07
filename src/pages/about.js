@@ -16,7 +16,7 @@ const AboutPage = ({ data }) => (
             <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               About me
             </h1>
-
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div className="mt-4 leading-loose">
             My name is Harry and I'm a graduate from Falmouth University where I studied a BA Animation & 
             Visual Effects degree and I'm currently working towards being an FX artist. 
@@ -37,13 +37,14 @@ const AboutPage = ({ data }) => (
                 harryorford1@gmail.com
               </a>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
+            <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
             <Img
               fluid={data.harry.childImageSharp.fluid}
               alt="John Doe"
               className="rounded-md shadow-md"
             />
+          </div>
+            </div>
           </div>
         </div>
       </div>
