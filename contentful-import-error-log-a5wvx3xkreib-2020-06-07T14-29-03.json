@@ -1,0 +1,1039 @@
+[
+  {
+    "ts": "2020-06-07T13:29:07.867Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "uy3h42sj0upk"
+            }
+          },
+          "id": "portfolio",
+          "type": "ContentType",
+          "createdAt": "2020-03-11T21:38:58.382Z",
+          "updatedAt": "2020-03-11T21:52:30.325Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 9,
+          "publishedAt": "2020-03-11T21:52:30.325Z",
+          "firstPublishedAt": "2020-03-11T21:38:58.972Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5GBl2yAHzXnu8cqPwGEcMy"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5GBl2yAHzXnu8cqPwGEcMy"
+            }
+          },
+          "publishedCounter": 5,
+          "version": 10,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "5GBl2yAHzXnu8cqPwGEcMy"
+            }
+          }
+        },
+        "displayField": "name",
+        "name": "Portfolio",
+        "description": "",
+        "fields": [
+          {
+            "id": "name",
+            "name": "Name",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "summary",
+            "name": "Summary",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "size": {
+                  "max": 80
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "thumbnail",
+            "name": "Thumbnail",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "description",
+            "name": "Description",
+            "type": "Text",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "gallery",
+            "name": "Gallery",
+            "type": "Array",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "items": {
+              "type": "Link",
+              "validations": [
+                {
+                  "linkMimetypeGroup": [
+                    "image"
+                  ]
+                },
+                {
+                  "assetImageDimensions": {
+                    "width": {
+                      "min": 900,
+                      "max": null
+                    },
+                    "height": {
+                      "min": 600,
+                      "max": null
+                    }
+                  }
+                }
+              ],
+              "linkType": "Asset"
+            }
+          },
+          {
+            "id": "url",
+            "name": "External URL",
+            "type": "Symbol",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "related",
+            "name": "Related projects",
+            "type": "Array",
+            "localized": false,
+            "required": false,
+            "validations": [
+              {
+                "size": {
+                  "min": 0,
+                  "max": 3
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "items": {
+              "type": "Link",
+              "validations": [
+                {
+                  "linkContentType": [
+                    "portfolio"
+                  ]
+                }
+              ],
+              "linkType": "Entry"
+            }
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "You need to omit a field before deleting it",
+        "details": {
+        },
+        "request": {
+          "url": "content_types/portfolio",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.7.13; feature library-import; sdk contentful-management.js/5.26.1; platform node.js/v12.18.0; os Windows/10.0.17763;",
+            "Authorization": "Bearer ...egFVU",
+            "user-agent": "node.js/v12.18.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 12,
+            "Content-Length": 1534
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"name\",\"name\":\"Portfolio\",\"description\":\"\",\"fields\":[{\"id\":\"name\",\"name\":\"Name\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"summary\",\"name\":\"Summary\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[{\"size\":{\"max\":80}}],\"disabled\":false,\"omitted\":false},{\"id\":\"slug\",\"name\":\"Slug\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[{\"unique\":true}],\"disabled\":false,\"omitted\":false},{\"id\":\"thumbnail\",\"name\":\"Thumbnail\",\"type\":\"Link\",\"localized\":false,\"required\":true,\"validations\":[{\"linkMimetypeGroup\":[\"image\"]}],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"},{\"id\":\"description\",\"name\":\"Description\",\"type\":\"Text\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"gallery\",\"name\":\"Gallery\",\"type\":\"Array\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false,\"items\":{\"type\":\"Link\",\"validations\":[{\"linkMimetypeGroup\":[\"image\"]},{\"assetImageDimensions\":{\"width\":{\"min\":900,\"max\":null},\"height\":{\"min\":600,\"max\":null}}}],\"linkType\":\"Asset\"}},{\"id\":\"url\",\"name\":\"External URL\",\"type\":\"Symbol\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"related\",\"name\":\"Related projects\",\"type\":\"Array\",\"localized\":false,\"required\":false,\"validations\":[{\"size\":{\"min\":0,\"max\":3}}],\"disabled\":false,\"omitted\":false,\"items\":{\"type\":\"Link\",\"validations\":[{\"linkContentType\":[\"portfolio\"]}],\"linkType\":\"Entry\"}}]}"
+        },
+        "requestId": "ca8cbfda1422a5cfcce7cc0ff8520188"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:29:18.832Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "original": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "cGMSGyWttmfv1RVTaITE3",
+            "type": "Entry",
+            "createdAt": "2020-03-12T13:46:17.514Z",
+            "updatedAt": "2020-03-12T13:55:54.656Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 26,
+            "publishedAt": "2020-03-12T13:55:54.656Z",
+            "firstPublishedAt": "2020-03-12T13:53:43.180Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 2,
+            "version": 27,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Poland"
+            },
+            "summary": {
+              "en-US": "Photos from trip to Poland, 2019"
+            },
+            "slug": {
+              "en-US": "poland"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2pzRh27gIiOAHXkonEritC"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Vestibulum at ipsum non massa viverra accumsan. Praesent id iaculis ex. Mauris nec tortor eros. Nunc in sapien quis nibh congue maximus nec sagittis nunc.\n\nQuisque pretium elit ut ante tincidunt, a interdum neque lobortis. "
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2pzRh27gIiOAHXkonEritC"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "7lDS5OCqQiJI6JWQwfooTy"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.polska.pl/"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6wJlM7wIdJ6rg55tWt8x2c"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6ybuKsRJxC4IGL1FwuAzen"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "transformed": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "cGMSGyWttmfv1RVTaITE3",
+            "type": "Entry",
+            "createdAt": "2020-03-12T13:46:17.514Z",
+            "updatedAt": "2020-03-12T13:55:54.656Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 26,
+            "publishedAt": "2020-03-12T13:55:54.656Z",
+            "firstPublishedAt": "2020-03-12T13:53:43.180Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 2,
+            "version": 27,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Poland"
+            },
+            "summary": {
+              "en-US": "Photos from trip to Poland, 2019"
+            },
+            "slug": {
+              "en-US": "poland"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2pzRh27gIiOAHXkonEritC"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Vestibulum at ipsum non massa viverra accumsan. Praesent id iaculis ex. Mauris nec tortor eros. Nunc in sapien quis nibh congue maximus nec sagittis nunc.\n\nQuisque pretium elit ut ante tincidunt, a interdum neque lobortis. "
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2pzRh27gIiOAHXkonEritC"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "7lDS5OCqQiJI6JWQwfooTy"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.polska.pl/"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6wJlM7wIdJ6rg55tWt8x2c"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6ybuKsRJxC4IGL1FwuAzen"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "Cannot edit archived",
+        "details": {
+        },
+        "request": {
+          "url": "entries/cGMSGyWttmfv1RVTaITE3",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.7.13; feature library-import; sdk contentful-management.js/5.26.1; platform node.js/v12.18.0; os Windows/10.0.17763;",
+            "Authorization": "Bearer ...egFVU",
+            "user-agent": "node.js/v12.18.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 8,
+            "Content-Length": 843
+          },
+          "method": "put",
+          "payloadData": "{\"fields\":{\"name\":{\"en-US\":\"Poland\"},\"summary\":{\"en-US\":\"Photos from trip to Poland, 2019\"},\"slug\":{\"en-US\":\"poland\"},\"thumbnail\":{\"en-US\":{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"2pzRh27gIiOAHXkonEritC\"}}},\"description\":{\"en-US\":\"Vestibulum at ipsum non massa viverra accumsan. Praesent id iaculis ex. Mauris nec tortor eros. Nunc in sapien quis nibh congue maximus nec sagittis nunc.\\n\\nQuisque pretium elit ut ante tincidunt, a interdum neque lobortis. \"},\"gallery\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"2pzRh27gIiOAHXkonEritC\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"7lDS5OCqQiJI6JWQwfooTy\"}}]},\"url\":{\"en-US\":\"https://www.polska.pl/\"},\"related\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"6wJlM7wIdJ6rg55tWt8x2c\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"6ybuKsRJxC4IGL1FwuAzen\"}}]}}}"
+        },
+        "requestId": "93385a0437a652ca9100f6a905ed922d"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:29:18.842Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "original": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "6ybuKsRJxC4IGL1FwuAzen",
+            "type": "Entry",
+            "createdAt": "2020-03-11T21:43:30.668Z",
+            "updatedAt": "2020-03-12T13:55:44.326Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 44,
+            "publishedAt": "2020-03-12T13:55:44.326Z",
+            "firstPublishedAt": "2020-03-11T21:47:52.191Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 8,
+            "version": 45,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Iceland"
+            },
+            "summary": {
+              "en-US": "Photos from my trip to Iceland"
+            },
+            "slug": {
+              "en-US": "iceland"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2rXXfCq7OmHHL4rXDp4uMl"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Aliquam erat volutpat. Pellentesque at neque diam. Pellentesque hendrerit, odio a pellentesque blandit, tellus nisl tempor tellus, placerat consequat ipsum ante finibus augue.\n\nUt porttitor nibh vitae elementum pretium. Morbi varius pulvinar purus, non tempus sem facilisis quis. Vivamus ac vulputate metus, ut fringilla erat."
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2rXXfCq7OmHHL4rXDp4uMl"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2hf317UJY21LgAalyf7kgf"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "YsoKW4AhvPFCKvux2GnzK"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.iceland.is"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6wJlM7wIdJ6rg55tWt8x2c"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "cGMSGyWttmfv1RVTaITE3"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "transformed": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "6ybuKsRJxC4IGL1FwuAzen",
+            "type": "Entry",
+            "createdAt": "2020-03-11T21:43:30.668Z",
+            "updatedAt": "2020-03-12T13:55:44.326Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 44,
+            "publishedAt": "2020-03-12T13:55:44.326Z",
+            "firstPublishedAt": "2020-03-11T21:47:52.191Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 8,
+            "version": 45,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Iceland"
+            },
+            "summary": {
+              "en-US": "Photos from my trip to Iceland"
+            },
+            "slug": {
+              "en-US": "iceland"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "2rXXfCq7OmHHL4rXDp4uMl"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Aliquam erat volutpat. Pellentesque at neque diam. Pellentesque hendrerit, odio a pellentesque blandit, tellus nisl tempor tellus, placerat consequat ipsum ante finibus augue.\n\nUt porttitor nibh vitae elementum pretium. Morbi varius pulvinar purus, non tempus sem facilisis quis. Vivamus ac vulputate metus, ut fringilla erat."
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2rXXfCq7OmHHL4rXDp4uMl"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "2hf317UJY21LgAalyf7kgf"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "YsoKW4AhvPFCKvux2GnzK"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.iceland.is"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6wJlM7wIdJ6rg55tWt8x2c"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "cGMSGyWttmfv1RVTaITE3"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "Cannot edit archived",
+        "details": {
+        },
+        "request": {
+          "url": "entries/6ybuKsRJxC4IGL1FwuAzen",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.7.13; feature library-import; sdk contentful-management.js/5.26.1; platform node.js/v12.18.0; os Windows/10.0.17763;",
+            "Authorization": "Bearer ...egFVU",
+            "user-agent": "node.js/v12.18.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 8,
+            "Content-Length": 1017
+          },
+          "method": "put",
+          "payloadData": "{\"fields\":{\"name\":{\"en-US\":\"Iceland\"},\"summary\":{\"en-US\":\"Photos from my trip to Iceland\"},\"slug\":{\"en-US\":\"iceland\"},\"thumbnail\":{\"en-US\":{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"2rXXfCq7OmHHL4rXDp4uMl\"}}},\"description\":{\"en-US\":\"Aliquam erat volutpat. Pellentesque at neque diam. Pellentesque hendrerit, odio a pellentesque blandit, tellus nisl tempor tellus, placerat consequat ipsum ante finibus augue.\\n\\nUt porttitor nibh vitae elementum pretium. Morbi varius pulvinar purus, non tempus sem facilisis quis. Vivamus ac vulputate metus, ut fringilla erat.\"},\"gallery\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"2rXXfCq7OmHHL4rXDp4uMl\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"2hf317UJY21LgAalyf7kgf\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"YsoKW4AhvPFCKvux2GnzK\"}}]},\"url\":{\"en-US\":\"https://www.iceland.is\"},\"related\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"6wJlM7wIdJ6rg55tWt8x2c\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"cGMSGyWttmfv1RVTaITE3\"}}]}}}"
+        },
+        "requestId": "6e5e36e0d8dc29ebc8425c6f5cc9dbdd"
+      }
+    }
+  },
+  {
+    "ts": "2020-06-07T13:29:18.844Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "original": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "6wJlM7wIdJ6rg55tWt8x2c",
+            "type": "Entry",
+            "createdAt": "2020-03-11T21:53:36.798Z",
+            "updatedAt": "2020-03-12T15:14:43.100Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 77,
+            "publishedAt": "2020-03-12T15:14:43.100Z",
+            "firstPublishedAt": "2020-03-11T21:54:21.908Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 10,
+            "version": 78,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Spain"
+            },
+            "summary": {
+              "en-US": "Photographies from my trip to Spain"
+            },
+            "slug": {
+              "en-US": "spain"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4Iqv52VORq3RHI1JUb6KxQ"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Duis posuere porta odio, et finibus ex dapibus at. Quisque condimentum turpis eget ligula congue, ac convallis tortor porta.\n\nEtiam vulputate odio nec ex viverra, a tristique ante tristique. Sed at scelerisque metus. "
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "4PwvtBmFDzNSlYyGOuJCBg"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "4Iqv52VORq3RHI1JUb6KxQ"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.spain.info"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6ybuKsRJxC4IGL1FwuAzen"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "cGMSGyWttmfv1RVTaITE3"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "transformed": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "uy3h42sj0upk"
+              }
+            },
+            "id": "6wJlM7wIdJ6rg55tWt8x2c",
+            "type": "Entry",
+            "createdAt": "2020-03-11T21:53:36.798Z",
+            "updatedAt": "2020-03-12T15:14:43.100Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 77,
+            "publishedAt": "2020-03-12T15:14:43.100Z",
+            "firstPublishedAt": "2020-03-11T21:54:21.908Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "publishedCounter": 10,
+            "version": 78,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "5GBl2yAHzXnu8cqPwGEcMy"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "portfolio"
+              }
+            }
+          },
+          "fields": {
+            "name": {
+              "en-US": "Spain"
+            },
+            "summary": {
+              "en-US": "Photographies from my trip to Spain"
+            },
+            "slug": {
+              "en-US": "spain"
+            },
+            "thumbnail": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "4Iqv52VORq3RHI1JUb6KxQ"
+                }
+              }
+            },
+            "description": {
+              "en-US": "Duis posuere porta odio, et finibus ex dapibus at. Quisque condimentum turpis eget ligula congue, ac convallis tortor porta.\n\nEtiam vulputate odio nec ex viverra, a tristique ante tristique. Sed at scelerisque metus. "
+            },
+            "gallery": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "4PwvtBmFDzNSlYyGOuJCBg"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "4Iqv52VORq3RHI1JUb6KxQ"
+                  }
+                }
+              ]
+            },
+            "url": {
+              "en-US": "https://www.spain.info"
+            },
+            "related": {
+              "en-US": [
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "6ybuKsRJxC4IGL1FwuAzen"
+                  }
+                },
+                {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "cGMSGyWttmfv1RVTaITE3"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "Cannot edit archived",
+        "details": {
+        },
+        "request": {
+          "url": "entries/6wJlM7wIdJ6rg55tWt8x2c",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.7.13; feature library-import; sdk contentful-management.js/5.26.1; platform node.js/v12.18.0; os Windows/10.0.17763;",
+            "Authorization": "Bearer ...egFVU",
+            "user-agent": "node.js/v12.18.0",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 10,
+            "Content-Length": 837
+          },
+          "method": "put",
+          "payloadData": "{\"fields\":{\"name\":{\"en-US\":\"Spain\"},\"summary\":{\"en-US\":\"Photographies from my trip to Spain\"},\"slug\":{\"en-US\":\"spain\"},\"thumbnail\":{\"en-US\":{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"4Iqv52VORq3RHI1JUb6KxQ\"}}},\"description\":{\"en-US\":\"Duis posuere porta odio, et finibus ex dapibus at. Quisque condimentum turpis eget ligula congue, ac convallis tortor porta.\\n\\nEtiam vulputate odio nec ex viverra, a tristique ante tristique. Sed at scelerisque metus. \"},\"gallery\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"4PwvtBmFDzNSlYyGOuJCBg\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"4Iqv52VORq3RHI1JUb6KxQ\"}}]},\"url\":{\"en-US\":\"https://www.spain.info\"},\"related\":{\"en-US\":[{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"6ybuKsRJxC4IGL1FwuAzen\"}},{\"sys\":{\"type\":\"Link\",\"linkType\":\"Entry\",\"id\":\"cGMSGyWttmfv1RVTaITE3\"}}]}}}"
+        },
+        "requestId": "2916ced91dfbf15956bd6293a6d002d2"
+      }
+    }
+  }
+]
