@@ -16,7 +16,7 @@ const TestContactPage = ({ data }) => (
             <br>
             </br>
                 <div className="container">
-                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="testcontact">
                 
                     <div class="flex flex-wrap -mx-3 mb-6">
                     
@@ -40,8 +40,6 @@ const TestContactPage = ({ data }) => (
                         <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
                             Submit
                         </button>
-                        <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" />
                 </div>
             </div>
 
