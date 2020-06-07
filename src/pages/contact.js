@@ -11,13 +11,13 @@ const ContactPage = ({ data }) => (
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
             <div className="container">
-              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Contact Form
-              </h1>
-              <br>
-              </br>
-            <div/>
+            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Contact Form
+            </h1>
+            <br>
+            </br>
             <Contact />
+            </div>
           </div>
         </div>   
       </div>
