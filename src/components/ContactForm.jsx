@@ -1,8 +1,7 @@
 import React from "react"
 
 const ContactForm = () => (
-  <div className="container">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact">
+         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" data-netlify-honeypot="bot-field" data-netlify="true" name="contact">
           
           <div class="flex flex-wrap -mx-3 mb-6">
             
@@ -55,7 +54,6 @@ const ContactForm = () => (
           </div>
 
         </form>
-  </div>
         )
 
 export default ContactForm

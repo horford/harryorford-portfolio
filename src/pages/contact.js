@@ -10,11 +10,13 @@ const ContactPage = ({ data }) => (
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Contact Form
-            </h1>
-            <br>
-            </br>
+            <div className="container">
+              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Contact Form
+              </h1>
+              <br>
+              </br>
+            <div/>
             <Contact />
           </div>
         </div>   
